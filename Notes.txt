@@ -1,0 +1,18 @@
+mkdir myProject # Copy the filepath excluding the actual file
+cd myProject # Example... cd C:User\CPSC362\Homework\
+
+py -3 -m venv venv
+venv\Scripts\activate
+
+# Terms:
+# mkdir creates a directory or subdirectory
+# cd change directory
+# py python
+# venv virtual environment
+# the hashtag/pound sign is how you comment in python instead of //
+
+install flask
+pip3 install flask gunicorn
+
+# flask - framework to build app
+# gunicorn - server used to run
