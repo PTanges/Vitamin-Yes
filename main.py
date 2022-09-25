@@ -13,5 +13,3 @@ def index():
 
 # Start the server
 app.run(threaded=True, port=5000)
-
-# print("Hello World")
