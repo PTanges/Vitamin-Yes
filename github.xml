@@ -1,7 +1,0 @@
-<application>
-  <component name="GithubAccounts">
-    <account name="PTanges" id="dc4e8dd6-3987-4ba3-89c4-fe5097dd593a">
-      <server host="github.com" />
-    </account>
-  </component>
-</application>
