@@ -14,5 +14,6 @@ venv\Scripts\activate
 install flask
 pip3 install flask gunicorn
 
-# flask - framework to build app
-# gunicorn - server used to run
+# flask - framework (library) to build app
+# gunicorn - front end framework
+# heroku server used to run/host the web app. Deploy later
