@@ -140,6 +140,7 @@ dmypy.json
 
 # IntelliJ
 .idea/
+Vitamin-Yes/.idea/
 inspection
 laf.xml
 github.xml
