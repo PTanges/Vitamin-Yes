@@ -1,5 +1,8 @@
 <application>
   <component name="FindSettings">
+    <option name="customScope" value="Project 'Vitamin-Yes'" />
+    <option name="defaultScopeName" value="Project 'Vitamin-Yes'" />
+    <option name="SEARCH_SCOPE" value="Project 'Vitamin-Yes'" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.xml</mask>
