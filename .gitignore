@@ -137,3 +137,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IntelliJ
+.idea/
+Vitamin-Yes/.idea/
+inspection
+laf.xml
+github.xml
+find.xml
+colors.scheme.xml
+debugger.xml
+editor.xml
+inspection/default.xml
+Vitamin-Yes.iml
+misc.xml

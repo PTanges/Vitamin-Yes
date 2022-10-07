@@ -13,3 +13,7 @@ def vitaminC():
 @routes.route("/Vitamin-D")
 def vitaminD():
     return render_template("vitamin-D.html", studentName="Patton Tang")
+
+@routes.route("/BMI", methods=('GET', 'POST'))
+def bmi():
+    return render_template("BMI.html")
