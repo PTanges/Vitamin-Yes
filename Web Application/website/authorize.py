@@ -7,6 +7,23 @@ authorize = Blueprint("routes", __name__)
 
 @authorize.route("/login", methods = ["GET", "POST"])
 def login():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
+
+        # Returns first result of a value that matches query
+        user = User.query.filter_by(email=email).first()
+        if user:
+            # Compare incoming password against database password
+            if check_password_hash(user.password, password):
+                flash("Login successful!", category="success")
+            else:
+                flash("Incorrect password, try again", category="error")
+        else:
+            # else is when no email is found, ie no user exists
+            # currently we only allow ONE account per email under this schema
+            flash('Email does not exist.', category="error")
+
     return render_template("login.html", boolean = True)
 
 @authorize.route("/create_account", methods = ["GET", "POST"])
@@ -18,7 +35,10 @@ def create_account():
         password2 = request.form.get("password2")
 
         domain = (".net", ".com", ".org", ".gov", ".edu")
-        if len(email) < 4:
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash("Email already exists", category="error")
+        elif len(email) < 4:
             flash("Email must be greater than 4 characters", category="error")
         elif not email.endswith(domain):
             flash("Email must end with a top-level domain", category="error")
@@ -35,8 +55,8 @@ def create_account():
             db.session.add(new_user)
             db.session.commit()
             # Flash may be unnecessary due to the redirect
-            flash('Account created!', category='success')
-            return redirect(url_for('route.home'))
+            flash('Account created!', category="success")
+            return redirect(url_for("route.home"))
 
     return render_template("create_account.html", boolean = True)
 
