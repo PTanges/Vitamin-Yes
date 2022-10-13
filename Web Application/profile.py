@@ -1,15 +1,11 @@
 class profile:
-
-    height = 0
-    weight = 0
-    BMI = 0
-
-    age = 0
-    sex = 0
-
     def __init__(self, name_first, name_last):
         self.name_first = name_first
         self.name_last = name_last
+        self.height, self.weight = 0
+        self.BMI = 0
+
+        self.age, self.sex = 0
 
     # this should prolly have data verification?? ill get to it when i get to it
     def GetHeight(self, height):

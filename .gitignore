@@ -137,6 +137,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/colors.scheme.xml
+/debugger.xml
+/inspection/Default.xml
+/laf.xml
 
 # IntelliJ
 .idea/
@@ -152,3 +156,7 @@ inspection/default.xml
 Vitamin-Yes.iml
 misc.xml
 vcs.xml
+/colors.scheme.xml
+/debugger.xml
+/inspection/Default.xml
+/laf.xml

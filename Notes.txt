@@ -17,3 +17,18 @@ pip3 install flask gunicorn
 # flask - framework (library) to build app
 # gunicorn - front end framework
 # heroku server used to run/host the web app. Deploy later
+
+# Date: 2022-10-12
+# Programmer: Patton
+# Description: Team members will also need to install these related libraries/packages...
+pip install flask-login
+pip install flask-sqlaclchemy
+
+# Note: Also! Know jinja from flask allows you to not have to use JS.
+# The imported files are bootstrap (CSS Framework + Toolkit) in the HTML files
+
+'''
+Generally...
+GET Request - Retrieve information, HTML
+POST Request - Make change to the DB or website state
+'''

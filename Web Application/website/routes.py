@@ -1,14 +1,18 @@
 from flask import Blueprint, render_template
 
-routes = Blueprint(__name__, "route")
+routes = Blueprint("route", __name__)
 
-@routes.route("/")
+@routes.route("/") # Decorator
 def home():
-    return "Welcome to Vitamin-Yes"
+    return render_template("home.html")
+
+@routes.route("/vitamin_list")
+def vitamin_list():
+    return render_template("vitamin_list.html")
 
 @routes.route("/Vitamin-C")
 def vitaminC():
-    return render_template("vitamin-C.html", studentName="Patrick Wong")
+    return render_template("/vitamin-C.html", studentName="Patrick Wong")
 
 @routes.route("/Vitamin-D")
 def vitaminD():
