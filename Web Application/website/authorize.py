@@ -34,7 +34,8 @@ def create_account():
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
 
-        domain = (".net", ".com", ".org", ".gov", ".edu")
+        # Most Common Top Level Domains
+        domain = (".net", ".com", ".org", ".gov", ".edu", ".blog", ".uk", ".us", ".de", ".io", ".co", ".biz", ".xyz")
         user = User.query.filter_by(email=email).first()
         if user:
             flash("Email already exists", category="error")
