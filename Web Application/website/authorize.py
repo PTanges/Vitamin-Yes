@@ -12,6 +12,11 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
 
+        try:
+            email = email.upper()
+        except:
+            pass
+
         # Returns first result of a value that matches query
         user = User.query.filter_by(email=email).first()
         if user:
@@ -19,6 +24,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash("Login successful!", category="success")
                 login_user(user, remember=True)
+                return redirect(url_for('route.home'))
             else:
                 flash("Incorrect password, try again", category="error")
         else:

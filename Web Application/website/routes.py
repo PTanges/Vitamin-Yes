@@ -9,8 +9,9 @@ def home():
     return render_template("home.html", user=current_user)
 
 @routes.route("/vitamin_list")
+@login_required
 def vitamin_list():
-    return render_template("vitamin_list.html")
+    return render_template("vitamin_list.html", user=current_user)
 
 @routes.route("/Vitamin-C")
 def vitaminC():
