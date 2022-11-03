@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
+from flask_login import LoginManager
 
 # SQL Database
 db = SQLAlchemy()
@@ -26,11 +27,21 @@ def create_application():
     app.register_blueprint(routes, url_prefix="/")
     app.register_blueprint(authorize, url_prefix="/")
 
+    from .models import User
+
     # Import table schemas, must run and load models.py before initialize DB
     # Dot operator makes this a relative import
     # No need to check for prior existing DB, flask will check
     from . import models
     with app.app_context():
         db.create_all()
+
+    login_manager = LoginManager()
+    login_manager.login_view = 'routes.login'
+    login_manager.init_app(app)
+
+    @login_manager.user_loader
+    def load_user(id):
+        return User.query.get(int(id))
 
     return app
