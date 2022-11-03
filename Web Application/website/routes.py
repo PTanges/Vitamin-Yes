@@ -1,14 +1,17 @@
 from flask import Blueprint, render_template
+from flask_login import login_required, current_user
 
 routes = Blueprint("route", __name__)
 
 @routes.route("/") # Decorator
+@login_required
 def home():
-    return render_template("home.html")
+    return render_template("home.html", user=current_user)
 
 @routes.route("/vitamin_list")
+@login_required
 def vitamin_list():
-    return render_template("vitamin_list.html")
+    return render_template("vitamin_list.html", user=current_user)
 
 @routes.route("/Vitamin-C")
 def vitaminC():
