@@ -1,0 +1,51 @@
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<div class="Volentary Sleep Information">
+    <div class="Sleep">
+        <form method="post" class="main-form" action-xhr="/submit-form" target="_top">
+            <div class="input">
+                <label for="form-Monday">Monday:</label><br>
+                <input type="number" name="Monday" id="form-Monday" required><br>
+                
+                <label for="form-Tuesday">Tuesday:</label><br>
+                <input type="number" name="Tuesday" id="form-Tuesday" required><br>
+                
+                <label for="form-Wednesday">Wednesday:</label><br>
+                <input type="number" name="Wednesday" id="form-Wednesday" required><br>
+               
+                <label for="form-Thursday">Thursday:</label><br>
+                <input type="number" name="Thursday" id="form-Thursday" required><br>
+                
+                <label for="form-Friday">Friday:</label><br>
+                <input type="number" name="Friday" id="form-Friday" required><br>
+              
+                <label for="form-Saturday">Saturday:</label><br>
+                <input type="number" name="Saturday" id="form-Saturday" required><br>
+                
+                <label for="form-Sunday">Sunday:</label><br>
+                <input type="number" name="Sunday" id="form-Sunday" required><br>
+               
+            </div>
+            <div class="input">
+
+                <label for="form-email">Email:</label><br>
+                <input type="email" name="email" id="form-email" required><br>
+                
+            </div>
+            <input type="submit" value="Submit" class="btn"><br>
+            <div submit-success>
+                <template type="amp-mustache">
+                    <p class="form-submit-response">
+                        Thank You!
+                    </p>
+                </template>
+            </div>
+            <div submit-error>
+                <template type="amp-mustache">
+                    <p class="form-submit-response">
+                        Oops! Sorry, there was an error.
+                    </p>
+                </template>
+            </div>
+        </form>
+    </div>
+</div>
