@@ -52,3 +52,11 @@ def Iodine():
 @routes.route("/Magnesium")
 def Magnesium():
     return render_template("Magnesium.html", studentName="Alejandro Ramos")
+
+@routes.route("/Vitamin-A")
+def vitaminA():
+    return render_template("/Vitamin-A.html", studentName="Patrick Wong")
+
+@routes.route("/Vitamin-B2")
+def vitaminB2():
+    return render_template("/Vitamin-B2.html", studentName="Patrick Wong")
