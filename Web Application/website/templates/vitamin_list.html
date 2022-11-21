@@ -3,4 +3,15 @@
 {% block title %} Vitamins {% endblock %}
 {% block content%}
 <h1> Vitamins</h1>
+<ul>
+  <li><a href="{{ url_for('vitaminC') }}">Vitamin C</a></li>
+  <li><a href="{{ url_for('vitaminD') }}">Vitamin D</a></li>
+  <li><a href="{{ url_for('vitaminE') }}">Vitamin E</a></li>
+  <li><a href="{{ url_for('vitaminK') }}">Vitamin K</a></li>
+  <li><a href="{{ url_for('Calcium') }}">Calcium</a></li>
+  <li><a href="{{ url_for('FolicAcid') }}">Folic Acid</a></li>
+  <li><a href="{{ url_for('Iodine') }}">Iodine</a></li>
+  <li><a href="{{ url_for('Magnesium') }}">Magnesium</a></li>
+</ul>
+ 
 {% endblock %}
