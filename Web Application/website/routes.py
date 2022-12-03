@@ -54,13 +54,13 @@ def Magnesium():
     return render_template("Magnesium.html", studentName="Alejandro Ramos")
 
 @routes.route("/VitaminB2")
-def B2():
+def VitaminB2():
     return render_template("VitaminB2.html", studentName="Alejandro Ramos")
 
 @routes.route("/VitaminB12")
-def B12():
+def VitaminB12():
     return render_template("VitaminB12.html", studentName="Alejandro Ramos")
 
 @routes.route("/VitaminB6")
-def B6():
+def VitaminB6():
     return render_template("VitaminB6.html", studentName="Alejandro Ramos")
