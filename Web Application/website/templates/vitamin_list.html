@@ -1,22 +1,21 @@
-{% extends "base.html" %}
+ {% extends "base.html" %}
 
 {% block title %} Vitamins {% endblock %}
 {% block content%}
-<style>
-  p {
-    font-size: 20px;
-  }
-</style>
 <h1> Vitamins</h1>
+<ul>
+  <li><a href="{{ url_for('route.vitaminC') }}">Vitamin C</a></li>
+  <li><a href="{{ url_for('route.vitaminD') }}">Vitamin D</a></li>
+  <li><a href="{{ url_for('route.vitaminE') }}">Vitamin E</a></li>
+  <li><a href="{{ url_for('route.vitaminK') }}">Vitamin K</a></li>
+  <li><a href="{{ url_for('route.Calcium') }}">Calcium</a></li>
+  <li><a href="{{ url_for('route.FolicAcid') }}">Folic Acid</a></li>
+  <li><a href="{{ url_for('route.Iodine') }}">Iodine</a></li>
+  <li><a href="{{ url_for('route.Magnesium') }}">Magnesium</a></li>
+  <li><a href="{{ url_for('route.B2') }}">Vitamin B2</a></li>
+  <li><a href="{{ url_for('route.A') }}">Vitamin A</a></li>
+  <li><a href="{{ url_for('route.B6') }}">Vitamin B6</a></li>
+  <li><a href="{{ url_for('route.B12') }}">Vitamin B12</a></li>
+</ul>
 
-<p><a href="{{ url_for('route.vitaminC') }}">Vitamin C</a></p>
-<p><a href="{{ url_for('route.vitaminD') }}">Vitamin D</a></p>
-<p><a href="{{ url_for('route.vitaminE') }}">Vitamin E</a></p>
-<p><a href="{{ url_for('route.vitaminK') }}">Vitamin K</a></p>
-<p><a href="{{ url_for('route.Calcium') }}">Calcium</a></p>
-<p><a href="{{ url_for('route.FolicAcid') }}">Folic Acid</a></p>
-<p><a href="{{ url_for('route.Iodine') }}">Iodine</a></p>
-<p><a href="{{ url_for('route.Magnesium') }}">Magnesium</a></p>
-
- 
 {% endblock %}
